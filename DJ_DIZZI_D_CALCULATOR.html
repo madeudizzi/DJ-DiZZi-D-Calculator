@@ -1,224 +1,208 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ DiZZi D - Professional DJ Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        h1, h2 {
+            color: #6200ea;
+        }
+        .calculator, .pricing-table, .additional-info {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #6200ea;
+            color: white;
+        }
+        select, input[type="text"], input[type="checkbox"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #3700b3;
+        }
+        #totalCost, #distanceResult {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;DJ DiZZi D - Professional DJ Services&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Arial', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f4f4f4;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1000px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #000;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.profile-img {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 200px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 200px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>object-fit: cover;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>h1, h2 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #6200ea;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.calculator, .pricing-table, .additional-info {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 4px rgba(0,0,0,0.1);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>table {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-collapse: collapse;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>th, td {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ddd;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>th {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #6200ea;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>select, input[type="text"], input[type="checkbox"] {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>button {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #6200ea;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #3700b3;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>#totalCost, #distanceResult {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>bottom: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="/api/placeholder/200/200" alt="DJ DiZZi D" class="profile-img"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;DJ DiZZi D&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Professional DJ Services for All Your Events&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="calculator"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Calculate Your Event Cost&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="eventType"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value=""&gt;Select Event Type&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="wedding"&gt;Wedding&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="lounge"&gt;Lounge/Bar&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="birthday"&gt;Birthday Party&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="corporate"&gt;Corporate Event&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="other"&gt;Other Private Event&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="checkbox" id="speakers"&gt; Include Speakers</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="checkbox" id="mcServices"&gt; Include MC Services</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="eventAddress" placeholder="Enter event address"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="calculateDistance()"&gt;Calculate Distance&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="distanceResult"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="calculateCost()"&gt;Calculate Total Cost&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="totalCost"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pricing-table"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Pricing Details&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;table&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;th&gt;Event Type&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;th&gt;Base Price&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;th&gt;With Speakers&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;th&gt;With MC Services&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;Weddings&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;$500&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;+$100&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;+$150&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;Lounges/Bars&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;$200&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;+$50&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;+$100&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;Birthday Parties&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;$200&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;+$75&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;+$100&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;Corporate Events&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;$500&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;+$100&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;+$150&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;Other Private Events&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;$200&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;+$75&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;+$100&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/table&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="additional-info"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Additional Fees&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Travel Fee (over 30 miles): $0.60 per mile (round trip)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Contact DJ DiZZi D: ninedsvnproductions@gmail.com | (713) 397-8497&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYFk5LThfLsn9F70_hxALzyeqmKDpNMaM&amp;libraries=places"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>let distance = 0;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function calculateDistance() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const origin = '200 Dominion Park Drive Houston, TX 77090';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const destination = document.getElementById('eventAddress').value;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const service = new google.maps.DistanceMatrixService();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>service.getDistanceMatrix(</p>
-<p class="p1"><span class="Apple-converted-space">                </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>origins: [origin],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>destinations: [destination],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>travelMode: 'DRIVING',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>unitSystem: google.maps.UnitSystem.IMPERIAL,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                </span>callback</p>
-<p class="p1"><span class="Apple-converted-space">            </span>);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function callback(response, status) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (status === 'OK') {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (response.rows[0].elements[0].status === 'OK') {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>distance = response.rows[0].elements[0].distance.value / 1609.34; // Convert meters to miles</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('distanceResult').innerHTML = `Distance: ${distance.toFixed(2)} miles`;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('distanceResult').innerHTML = 'Unable to calculate distance. Please check the address.';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('distanceResult').innerHTML = `Error: ${status}. Please try again later.`;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function calculateCost() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>// ... (rest of the calculateCost function remains the same)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <header>
+        <img src="/api/placeholder/200/200" alt="DJ DiZZi D" class="profile-img">
+        <h1>DJ DiZZi D</h1>
+        <p>Professional DJ Services for All Your Events</p>
+    </header>
+
+    <div class="container">
+        <div class="calculator">
+            <h2>Calculate Your Event Cost</h2>
+            <select id="eventType">
+                <option value="">Select Event Type</option>
+                <option value="wedding">Wedding</option>
+                <option value="lounge">Lounge/Bar</option>
+                <option value="birthday">Birthday Party</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="other">Other Private Event</option>
+            </select>
+            <input type="checkbox" id="speakers"> Include Speakers
+            <input type="checkbox" id="mcServices"> Include MC Services
+            <input type="text" id="eventAddress" placeholder="Enter event address">
+            <button onclick="calculateDistance()">Calculate Distance</button>
+            <div id="distanceResult"></div>
+            <button onclick="calculateCost()">Calculate Total Cost</button>
+            <div id="totalCost"></div>
+        </div>
+
+        <div class="pricing-table">
+            <h2>Pricing Details</h2>
+            <table>
+                <tr>
+                    <th>Event Type</th>
+                    <th>Base Price</th>
+                    <th>With Speakers</th>
+                    <th>With MC Services</th>
+                </tr>
+                <tr>
+                    <td>Weddings</td>
+                    <td>$500</td>
+                    <td>+$100</td>
+                    <td>+$150</td>
+                </tr>
+                <tr>
+                    <td>Lounges/Bars</td>
+                    <td>$200</td>
+                    <td>+$50</td>
+                    <td>+$100</td>
+                </tr>
+                <tr>
+                    <td>Birthday Parties</td>
+                    <td>$200</td>
+                    <td>+$75</td>
+                    <td>+$100</td>
+                </tr>
+                <tr>
+                    <td>Corporate Events</td>
+                    <td>$500</td>
+                    <td>+$100</td>
+                    <td>+$150</td>
+                </tr>
+                <tr>
+                    <td>Other Private Events</td>
+                    <td>$200</td>
+                    <td>+$75</td>
+                    <td>+$100</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="additional-info">
+            <h2>Additional Fees</h2>
+            <p>Travel Fee (over 30 miles): $0.60 per mile (round trip)</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact DJ DiZZi D: ninedsvnproductions@gmail.com | (713) 397-8497</p>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYFk5LThfLsn9F70_hxALzyeqmKDpNMaM&libraries=places"></script>
+    <script>
+        let distance = 0;
+
+        function calculateDistance() {
+            const origin = '200 Dominion Park Drive Houston, TX 77090';
+            const destination = document.getElementById('eventAddress').value;
+
+            const service = new google.maps.DistanceMatrixService();
+            service.getDistanceMatrix(
+                {
+                    origins: [origin],
+                    destinations: [destination],
+                    travelMode: 'DRIVING',
+                    unitSystem: google.maps.UnitSystem.IMPERIAL,
+                },
+                callback
+            );
+        }
+
+        function callback(response, status) {
+            if (status === 'OK') {
+                if (response.rows[0].elements[0].status === 'OK') {
+                    distance = response.rows[0].elements[0].distance.value / 1609.34; // Convert meters to miles
+                    document.getElementById('distanceResult').innerHTML = `Distance: ${distance.toFixed(2)} miles`;
+                } else {
+                    document.getElementById('distanceResult').innerHTML = 'Unable to calculate distance. Please check the address.';
+                }
+            } else {
+                document.getElementById('distanceResult').innerHTML = `Error: ${status}. Please try again later.`;
+            }
+        }
+
+        function calculateCost() {
+            // ... (rest of the calculateCost function remains the same)
+        }
+    </script>
 </body>
 </html>
